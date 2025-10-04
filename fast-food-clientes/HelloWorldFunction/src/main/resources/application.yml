@@ -1,0 +1,30 @@
+
+#server:
+#  port: 9090
+#  servlet:
+#    context-path: /webhook
+#
+#spring:
+#  application:
+#    name: Webhook
+#
+#  output:
+#    ansi:
+#      enabled: always
+#
+#  springdoc:
+#    api-docs:
+#      enabled: true
+#    swagger-ui:
+#      enabled: true
+#      path: /swagger-ui.html
+
+cognito:
+  url: https://cognito-idp.us-east-1.amazonaws.com
+  service: cognito-idp
+  auth_flow: USER_PASSWORD_AUTH
+  user_pool_id: us-east-1_Z9KXAxv4B
+  client_id_cognito: 2pulb1req2tsmglk3th7b5gqcs
+
+aws:
+  region: us-east-1
