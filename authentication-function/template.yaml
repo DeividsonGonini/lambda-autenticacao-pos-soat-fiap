@@ -12,12 +12,11 @@ Globals:
     MemorySize: 512
 
 Resources:
-  HelloWorldFunction:
+  AuthenticationFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri:  D:\Estudos\FIAP - Arquitetura de Software\Github\lambda-fast-food-cliente-tc\fast-food-clientes\HelloWorldFunction\target\HelloWorldFunction-1.0-SNAPSHOT.jar
-#      CodeUri: HelloWorldFunction
-      Handler: helloworld.App::handleRequest
+      CodeUri:  D:\Estudos\FIAP - Arquitetura de Software\Github\lambda-fast-food-cliente-tc\authentication-function\AuthenticationFunction\target\AuthenticationFunction-1.0-SNAPSHOT.jar
+      Handler: authentication.App::handleRequest
       Runtime: java21
       Architectures:
         - x86_64
@@ -30,7 +29,7 @@ Resources:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /user
+            Path: /autentications
             Method: get
 
 Outputs:
