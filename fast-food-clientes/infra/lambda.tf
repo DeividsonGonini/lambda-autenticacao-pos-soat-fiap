@@ -1,15 +1,15 @@
 # Lambda Function
 resource "aws_lambda_function" "fast-food-authentication" {
-  function_name = "HelloWorldFunction"
-  handler       = "helloworld.App::handleRequest"
+  function_name = "AuthenticationFunction"
+  handler       = "authentication.App::handleRequest"
   runtime       = "java17"
   memory_size   = 512
   timeout       = 60
   architectures = ["x86_64"]
 
   # Usando o JAR gerado no Maven (precisa empacotar antes de rodar o Terraform)
-  filename         = "../HelloWorldFunction/target/HelloWorldFunction-1.0-SNAPSHOT.jar"
-  source_code_hash = filebase64sha256("../HelloWorldFunction/target/HelloWorldFunction-1.0-SNAPSHOT.jar")
+  filename         = "../AuthenticationFunction/target/AuthenticationFunction-1.0-SNAPSHOT.jar"
+  source_code_hash = filebase64sha256("../AuthenticationFunction/target/AuthenticationFunction-1.0-SNAPSHOT.jar")
 
   # Role já existente no AWS Academy (não cria nova role)
   role = "arn:aws:iam::891377152273:role/LabRole"

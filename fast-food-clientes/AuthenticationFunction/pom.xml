@@ -7,9 +7,9 @@
     <packaging>jar</packaging>
     <name>A sample Hello World created for SAM CLI.</name>
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <java.version>21</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
@@ -76,7 +76,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
-              <release>21</release>
+              <release>17</release>
           </configuration>
         </plugin>
       </plugins>
